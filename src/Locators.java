@@ -10,12 +10,14 @@ public class Locators {
     public static void main(String[] args) throws InterruptedException {
         WebDriver driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        String password =getPassword(driver);
         driver.get("https://rahulshettyacademy.com/locatorspractice/");
 
         String username = "Vinutha";
 
         driver.findElement(By.id("inputUsername")).sendKeys(username);
         driver.findElement(By.name("inputPassword")).sendKeys("hello123");
+
         driver.findElement(By.className("signInBtn")).click();
 
         System.out.println( driver.findElement(By.cssSelector("p.error")).getText());
@@ -32,7 +34,7 @@ public class Locators {
         driver.findElement(By.xpath("//div[@class=\"forgot-pwd-btn-conainer\"]/button[1]")).click();
 
         driver.findElement(By.id("inputUsername")).sendKeys(username);
-        driver.findElement(By.cssSelector("input[name*=inputPass]")).sendKeys("rahulshettyacademy");
+        driver.findElement(By.cssSelector("input[name*=inputPass]")).sendKeys(password);
         Thread.sleep(2000);
         driver.findElement(By.cssSelector("input#chkboxOne")).click();
         driver.findElement(By.cssSelector("input#chkboxTwo")).click();
@@ -42,5 +44,15 @@ public class Locators {
         Assert.assertEquals(driver.findElement(By.cssSelector("div.login-container >p")).getText(),"You are successfully logged in.");
         driver.findElement(By.cssSelector("button.logout-btn")).click();
         driver.close();
+    }
+    public static String getPassword(WebDriver driver) throws InterruptedException{
+        driver.get("https://rahulshettyacademy.com/locatorspractice/");
+        driver.findElement(By.linkText("Forgot your password?")).click();
+        Thread.sleep(2000);
+        driver.findElement(By.cssSelector(".reset-pwd-btn")).click();
+      String passwordText = driver.findElement(By.cssSelector("form > p.infoMsg")).getText();
+      String getPassword[]=passwordText.split("'");
+      String password=getPassword[1].split("'")[0];
+      return password;
     }
 }
