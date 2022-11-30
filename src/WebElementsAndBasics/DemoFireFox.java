@@ -1,11 +1,14 @@
+package WebElementsAndBasics;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.safari.SafariDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 
-public class DemoSafari {
-    public static void main(String[] args) throws InterruptedException{
-        WebDriver driver = new SafariDriver();
+public class DemoFireFox {
+    public static void main(String[] args) throws InterruptedException {
+       // System.setProperty("webdriver.gecko.driver","/Users/vinuthar/eclipse-workspace/geckodriver");
+        WebDriver driver = new FirefoxDriver();
         String password =getPassword(driver);
         driver.get("https://rahulshettyacademy.com/locatorspractice/");
 
