@@ -41,5 +41,7 @@ public class Scope {
                 System.out.println(driver.getTitle());
             }
         }
+        driver.switchTo().window(mainWindow);
+        System.out.println(driver.getTitle());
     }
 }
