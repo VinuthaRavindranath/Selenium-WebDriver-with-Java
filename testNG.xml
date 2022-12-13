@@ -1,0 +1,10 @@
+<suite name = "Suite">
+    <parameter name="URL"  value="https://rahulshettyacademy.com/angularpractice/"/>
+    <test name ="Test">
+        <classes>
+            <class name = "TestNG.BrowseJourney"/>
+            <class name = "TestNG.CheckoutJourney"/>
+            <class name = "TestNG.MyAccountJourney"/>
+        </classes>
+    </test>
+</suite>
