@@ -1,10 +1,35 @@
-<suite name = "Suite">
-    <parameter name="URL"  value="https://rahulshettyacademy.com/angularpractice/"/>
-    <test name ="Test">
+<suite name = "Suite" parallel="tests" thread-count="2">
+    <listeners>
+        <listener class-name="TestNG.Listeners"/>
+    </listeners>
+    <parameter name="URL"  value="https://rahulshettyacademy.com/locatorspractice/"/>
+    <test name ="Browse flow">
         <classes>
             <class name = "TestNG.BrowseJourney"/>
-            <class name = "TestNG.CheckoutJourney"/>
-            <class name = "TestNG.MyAccountJourney"/>
+            <class name="TestNG.MyAccountJourney"/>
+        </classes>
+    </test>
+
+    <test name ="checkout flow">
+        <classes>
+            <class name = "TestNG.CheckoutJourney">
+                <methods>
+                    <exclude name="verifyOrderConfirmationPage"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <parameter name="URL"  value="https://rahulshettyacademy.com/maps/api/place/add/json"/>
+    <parameter name="API Key"  value="34FRYJV346"/>
+    <parameter name="Content-Type"  value="application/json"/>
+    <test name ="Api flow">
+        <classes>
+            <class name = "TestNG.ApiJourney">
+                <methods>
+                    <include name="get.*"/>
+                </methods>
+            </class>
         </classes>
     </test>
 </suite>
