@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="5" total="23" passed="18" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-12-15T07:36:44 IST" name="Suite" finished-at="2022-12-15T07:36:49 IST" duration-ms="5077">
+    <groups>
+    </groups>
+    <test started-at="2022-12-15T07:36:44 IST" name="checkout flow" finished-at="2022-12-15T07:36:44 IST" duration-ms="28">
+      <class name="TestNG.CheckoutJourney">
+        <test-method is-config="true" signature="selectShippingMethod()[pri:0, instance:TestNG.CheckoutJourney@27c86f2d]" started-at="2022-12-15T07:36:44 IST" name="selectShippingMethod" finished-at="2022-12-15T07:36:44 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectShippingMethod -->
+        <test-method signature="addAddress()[pri:0, instance:TestNG.CheckoutJourney@27c86f2d]" started-at="2022-12-15T07:36:44 IST" name="addAddress" finished-at="2022-12-15T07:36:44 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addAddress -->
+        <test-method signature="makePayment()[pri:0, instance:TestNG.CheckoutJourney@27c86f2d]" started-at="2022-12-15T07:36:44 IST" name="makePayment" finished-at="2022-12-15T07:36:44 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- makePayment -->
+        <test-method signature="orderConfirmationEmail()[pri:0, instance:TestNG.CheckoutJourney@27c86f2d]" started-at="2022-12-15T07:36:44 IST" name="orderConfirmationEmail" finished-at="2022-12-15T07:36:44 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- orderConfirmationEmail -->
+        <test-method signature="selectShippingMethod()[pri:0, instance:TestNG.CheckoutJourney@27c86f2d]" started-at="2022-12-15T07:36:44 IST" name="selectShippingMethod" finished-at="2022-12-15T07:36:44 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectShippingMethod -->
+        <test-method is-config="true" signature="orderConfirmationEmail()[pri:0, instance:TestNG.CheckoutJourney@27c86f2d]" started-at="2022-12-15T07:36:44 IST" name="orderConfirmationEmail" finished-at="2022-12-15T07:36:44 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- orderConfirmationEmail -->
+      </class> <!-- TestNG.CheckoutJourney -->
+    </test> <!-- checkout flow -->
+    <test started-at="2022-12-15T07:36:49 IST" name="Api flow" finished-at="2022-12-15T07:36:49 IST" duration-ms="3">
+      <class name="TestNG.ApiJourney">
+        <test-method signature="getCartAPI()[pri:0, instance:TestNG.ApiJourney@4c15e7fd]" started-at="2022-12-15T07:36:49 IST" name="getCartAPI" finished-at="2022-12-15T07:36:49 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getCartAPI -->
+        <test-method signature="getLoginAPI(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:TestNG.ApiJourney@4c15e7fd]" started-at="2022-12-15T07:36:49 IST" name="getLoginAPI" finished-at="2022-12-15T07:36:49 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[34FRYJV346]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://rahulshettyacademy.com/maps/api/place/add/json]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[application/json]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getLoginAPI -->
+        <test-method signature="getShippingAddressAPI()[pri:0, instance:TestNG.ApiJourney@4c15e7fd]" started-at="2022-12-15T07:36:49 IST" name="getShippingAddressAPI" finished-at="2022-12-15T07:36:49 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getShippingAddressAPI -->
+      </class> <!-- TestNG.ApiJourney -->
+      <class name="TestNG.BrowseJourney">
+        <test-method is-config="true" signature="openBrowser(java.lang.String)[pri:0, instance:TestNG.BrowseJourney@2d9d4f9d]" started-at="2022-12-15T07:36:40 IST" name="openBrowser" finished-at="2022-12-15T07:36:44 IST" duration-ms="3431" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://rahulshettyacademy.com/maps/api/place/add/json]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+      </class> <!-- TestNG.BrowseJourney -->
+    </test> <!-- Api flow -->
+    <test started-at="2022-12-15T07:36:44 IST" name="Browse flow" finished-at="2022-12-15T07:36:45 IST" duration-ms="1697">
+      <class name="TestNG.MyAccountJourney">
+        <test-method signature="myOrdersPage()[pri:0, instance:TestNG.MyAccountJourney@1a84f40f]" started-at="2022-12-15T07:36:45 IST" name="myOrdersPage" finished-at="2022-12-15T07:36:45 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- myOrdersPage -->
+        <test-method signature="resetPassword()[pri:0, instance:TestNG.MyAccountJourney@1a84f40f]" started-at="2022-12-15T07:36:45 IST" name="resetPassword" finished-at="2022-12-15T07:36:45 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resetPassword -->
+        <test-method signature="validateAccountDetails()[pri:0, instance:TestNG.MyAccountJourney@1a84f40f]" started-at="2022-12-15T07:36:45 IST" name="validateAccountDetails" finished-at="2022-12-15T07:36:45 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateAccountDetails -->
+      </class> <!-- TestNG.MyAccountJourney -->
+      <class name="TestNG.BrowseJourney">
+        <test-method signature="browseProducts()[pri:0, instance:TestNG.BrowseJourney@2d9d4f9d]" started-at="2022-12-15T07:36:44 IST" name="browseProducts" finished-at="2022-12-15T07:36:44 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browseProducts -->
+        <test-method signature="login(java.lang.String,java.lang.String)[pri:0, instance:TestNG.BrowseJourney@2d9d4f9d]" started-at="2022-12-15T07:36:44 IST" name="login" data-provider="getData" finished-at="2022-12-15T07:36:44 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firstsetusername]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[firstpassword]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="login(java.lang.String,java.lang.String)[pri:0, instance:TestNG.BrowseJourney@2d9d4f9d]" started-at="2022-12-15T07:36:44 IST" name="login" data-provider="getData" finished-at="2022-12-15T07:36:44 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[secondsetusername]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[secondpassword]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="login(java.lang.String,java.lang.String)[pri:0, instance:TestNG.BrowseJourney@2d9d4f9d]" started-at="2022-12-15T07:36:44 IST" name="login" data-provider="getData" finished-at="2022-12-15T07:36:44 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[thirdsetusername]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[thirdpassword]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="openBrowser(java.lang.String)[pri:0, instance:TestNG.BrowseJourney@2d9d4f9d]" started-at="2022-12-15T07:36:44 IST" name="openBrowser" finished-at="2022-12-15T07:36:45 IST" duration-ms="1659" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://rahulshettyacademy.com/maps/api/place/add/json]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method signature="addProductsToCart()[pri:0, instance:TestNG.BrowseJourney@2d9d4f9d]" started-at="2022-12-15T07:36:45 IST" name="addProductsToCart" finished-at="2022-12-15T07:36:45 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addProductsToCart -->
+        <test-method signature="logout()[pri:0, instance:TestNG.BrowseJourney@2d9d4f9d]" started-at="2022-12-15T07:36:45 IST" name="logout" finished-at="2022-12-15T07:36:45 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+        <test-method signature="searchProducts()[pri:0, instance:TestNG.BrowseJourney@2d9d4f9d]" started-at="2022-12-15T07:36:45 IST" name="searchProducts" finished-at="2022-12-15T07:36:45 IST" depends-on-methods="TestNG.BrowseJourney.browseProducts, TestNG.BrowseJourney.login, TestNG.BrowseJourney.openBrowser" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchProducts -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:TestNG.BrowseJourney@2d9d4f9d]" started-at="2022-12-15T07:36:45 IST" name="logout" finished-at="2022-12-15T07:36:45 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+      </class> <!-- TestNG.BrowseJourney -->
+    </test> <!-- Browse flow -->
+  </suite> <!-- Suite -->
+</testng-results>
