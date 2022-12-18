@@ -1,7 +1,6 @@
-package FrameWork;
+package FrameWorkDemo.pageObjects;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -11,7 +10,6 @@ import org.testng.Assert;
 
 import java.time.Duration;
 import java.util.List;
-import java.util.stream.Stream;
 
 public class StandAloneTest {
 
@@ -21,6 +19,7 @@ public class StandAloneTest {
         driver.manage().window().maximize();
 
         driver.get("https://rahulshettyacademy.com/client/");
+        LoginPage lp = new LoginPage(driver);
         driver.findElement(By.id("userEmail")).sendKeys("vinuthatest27@gmail.com");
         driver.findElement(By.id("userPassword")).sendKeys("test@123");
         driver.findElement(By.id("login")).click();
