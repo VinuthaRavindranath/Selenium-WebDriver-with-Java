@@ -1,6 +1,7 @@
 package FrameworkAbstractComponents;
 
 import FrameWorkDemo.pageObjects.CartPage;
+import FrameWorkDemo.pageObjects.MyOrdersPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -22,6 +23,11 @@ public class AbstractComponents {
         explicitWait.until(ExpectedConditions.visibilityOfElementLocated(findBy));
     }
 
+    public void waitForVisibilityOfWebElement(WebElement element){
+        WebDriverWait explicitWait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        explicitWait.until(ExpectedConditions.visibilityOf(element));
+    }
+
     public void waitForElementToBeInvisible(WebElement element){
         WebDriverWait explicitWait = new WebDriverWait(driver, Duration.ofSeconds(5));
         explicitWait.until(ExpectedConditions.invisibilityOf(element));
@@ -30,12 +36,17 @@ public class AbstractComponents {
     @FindBy(xpath="//button[@routerlink='/dashboard/cart']")
     WebElement cartIcon ;
 
+    @FindBy (css="button[routerlink*='myorders']")
+    WebElement ordersButton;
+
     public CartPage goToCartPage(){
         cartIcon.click();
         return new CartPage(driver);
     }
 
-    public void clickOnButton(WebDriver element){
-
+    public MyOrdersPage goToMyOrdersPage(){
+        ordersButton.click();
+        return new MyOrdersPage(driver);
     }
+
 }
