@@ -1,33 +1,18 @@
-<suite name = "Suite" parallel="tests" thread-count="2">
-    <listeners>
-        <listener class-name="TestNG.Listeners"/>
-    </listeners>
-    <parameter name="URL"  value="https://rahulshettyacademy.com/locatorspractice/"/>
-    <test name ="Browse flow">
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="All Test Suite">
+    <test thread-count="5" verbose="2" preserve-order="true"
+          name="/Users/vinuthar/eclipse-workspace/Selenium-WebDriver-with-Java/src/FrameWorkTest">
         <classes>
-            <class name = "TestNG.BrowseJourney"/>
-            <class name="TestNG.MyAccountJourney"/>
-        </classes>
-    </test>
-
-    <test name ="checkout flow">
-        <classes>
-            <class name = "TestNG.CheckoutJourney">
+            <class name="FrameWorkTest.Tests.ErrorValidations">
                 <methods>
-                    <exclude name="verifyOrderConfirmationPage"/>
+                    <include name="loginWithIncorrectCredentials"/>
                 </methods>
             </class>
-        </classes>
-    </test>
-
-    <parameter name="URL"  value="https://rahulshettyacademy.com/maps/api/place/add/json"/>
-    <parameter name="API Key"  value="34FRYJV346"/>
-    <parameter name="Content-Type"  value="application/json"/>
-    <test name ="Api flow">
-        <classes>
-            <class name = "TestNG.ApiJourney">
+            <class name="FrameWorkTest.Tests.OrderPlacement">
                 <methods>
-                    <include name="get.*"/>
+                    <include name="OrderPlacement"/>
+                    <include name="OrdersPageValidation"/>
                 </methods>
             </class>
         </classes>
