@@ -2,13 +2,18 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite parallel="tests" name="All Test Suite">
     <test thread-count="5" verbose="2" preserve-order="true"
-          name="/Users/vinuthar/eclipse-workspace/Selenium-WebDriver-with-Java/src/FrameWorkTest">
+          name="Error Validation">
         <classes>
             <class name="FrameWorkTest.Tests.ErrorValidations">
                 <methods>
                     <include name="loginWithIncorrectCredentials"/>
                 </methods>
             </class>
+        </classes>
+    </test>
+    <test thread-count="5" verbose="2" preserve-order="true"
+          name="Order Placement">
+        <classes>
             <class name="FrameWorkTest.Tests.OrderPlacement">
                 <methods>
                     <include name="OrderPlacement"/>
