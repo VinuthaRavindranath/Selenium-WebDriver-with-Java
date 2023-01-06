@@ -5,7 +5,6 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 import java.time.Duration;
 import java.util.Iterator;
 import java.util.Set;
@@ -26,7 +25,7 @@ public class Scope {
         int size = firstRowFooter.findElements(By.tagName("a")).size();
         System.out.println(size);
 
-        for (int i = 1; i < size; i++) {
+        for (int i = 1; i < size; i++){
            String clickOnLinkInNewTab= Keys.chord(Keys.COMMAND, Keys.ENTER);
             firstRowFooter.findElements(By.tagName("a")).get(i).sendKeys(clickOnLinkInNewTab);
         }
