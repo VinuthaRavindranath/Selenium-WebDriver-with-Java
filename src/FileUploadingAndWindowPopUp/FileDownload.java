@@ -6,13 +6,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
-public class WindowPopUp {
-    public static void main(String[] args) {
+public class FileDownload {
+    public static void main(String[] args) throws InterruptedException {
         WebDriver driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();
-        driver.get("https://admin:admin@the-internet.herokuapp.com/");
-        driver.findElement(By.cssSelector("a[href*='/basic_auth']")).click();
-
+        driver.get("https://chromedriver.storage.googleapis.com/index.html?path=109.0.5414.25/");
+        driver.findElement(By.cssSelector("a[href*='mac64.zip']")).click();
+        Thread.sleep(15000);
+        driver.close();
     }
 }
